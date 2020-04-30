@@ -4,8 +4,8 @@ module.exports = [
   {
     node: 'steering.autopilot.state',
     value: function(n2k) {
-      debug('n2k.fields:: %j' + n2k.fields)
-      var mode = Number(n2k.fields['Autopilot Mode']);
+      var mode = n2k.fields['Autopilot Mode'];
+      debug('n2k.fields: %s', mode)
       if ( mode == 'Standby' )
         return 'standby';
       else if ( mode == 'Wind Mode')
